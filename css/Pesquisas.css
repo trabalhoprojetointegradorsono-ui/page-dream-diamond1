@@ -344,24 +344,19 @@ footer p{
 
 /* ==========================================================
    DESKTOP (dentro da media query)
-   Igual ao Figma: tudo escala junto com a largura da tela
+   Mesmo padrao da Home: fonte base do clamp (maximo 26px),
+   larguras maximas e tamanhos que nao crescem com a tela
    ========================================================== */
 
-@media (min-width: 768px){
+@media (min-width: 720px){
 
-    /* 1rem passa a valer 3.81vw, assim tudo que esta em rem escala proporcional */
-    html{
-        font-size: 3.81vw;
-    }
-
-    /* === header === */
+    /* === header (mantido como voce deixou) === */
 
     header{
         display: block;
         padding: 0.5vw 0;
     }
 
-    /* menu em linha, centralizado (fica com uns 78% da largura da tela) */
     .nav-list{
         flex-direction: row;
         flex-wrap: nowrap;
@@ -395,124 +390,136 @@ footer p{
     /* === pesquisas === */
 
     .pesquisas{
-        height: 53vw;
+        height: 32vw;
+        min-height: 280px;
         padding: 0 8vw;
     }
 
     .pesquisas h1{
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     /* === melhore === */
 
     .melhore{
-        padding: 3rem 3vw 0 3vw;
+        padding: 3rem 4vw 0 4vw;
     }
 
     .melhore h2{
-        font-size: 1.7rem;
-        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
 
     .melhore ul{
         flex-direction: row;
-        padding: 2rem 0.7rem;
-        gap: 0.4rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+        border-radius: 1rem;
     }
 
     .melhore li{
         flex: 1;
     }
 
-    /* desktop: volta ao normal (imagem em cima, depois titulo e paragrafo) */
     .melhore li div{
         display: block;
-        padding: 0.8rem 0.6rem;
+        padding: 1.2rem 1rem;
     }
 
     .melhore img{
-        width: 3.2rem;
-        height: 3.2rem;
-        margin: 0 auto 0.5rem auto;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 0.6rem auto;
     }
 
     .melhore h3{
-        font-size: 0.75rem;
+        font-size: 0.9rem;
     }
 
     .melhore p{
-        font-size: 0.6rem;
+        font-size: 0.72rem;
     }
 
     /* === divisor === */
 
     .divisor{
-        margin: 3rem auto 0 auto;
+        width: 85%;
+        background-color: rgba(68, 68, 68, 0.7);
+        margin: 2.5rem auto 0 auto;
     }
 
     /* === estagios === */
 
     .estagios{
-        padding: 3rem 0 0 0;
+        padding: 2.5rem 0 0 0;
     }
 
     .estagios h2{
-        font-size: 1.55rem;
+        font-size: 1.3rem;
         margin: 0 0 1.5rem 0;
     }
 
     .estagios ul{
-        width: 77%;
+        width: 90%;
+        max-width: 720px;
+    }
+
+    .estagios li{
+        padding: 0.6rem 0;
     }
 
     .estagios .title{
-        width: 4.7rem;
+        width: 4.5rem;
         padding: 0.5rem 0 0.5rem 1.3rem;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
     }
 
     .estagios li p{
-        font-size: 0.75rem;
-        padding: 0 0.5rem 0 1.9rem;
+        font-size: 0.72rem;
+        padding: 0 0.8rem 0 1.5rem;
     }
 
     .estagios > img{
         width: 60%;
+        max-width: 700px;
     }
 
     /* === paralisia === */
 
     .paralisia{
-        padding: 4rem 0 0 0;
+        padding: 3rem 0 0 0;
     }
 
     .paralisia h2{
-        font-size: 1.55rem;
-        max-width: 9rem;
-        margin: 0 auto 1.5rem auto;
+        font-size: 1.3rem;
+        max-width: 11rem;
+        margin: 0 auto 1rem auto;
     }
 
     .paralisia > p{
-        font-size: 0.9rem;
-        max-width: 87%;
-        margin: 0 auto 2.5rem auto;
+        font-size: 0.8rem;
+        max-width: 800px;
+        margin: 0 auto 2rem auto;
     }
 
     .paralisia ol{
         position: relative;
-        width: auto;
-        margin: 0;
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
         flex-direction: row;
         gap: 1.2rem;
-        padding: 0 4%;
+        padding: 0;
     }
 
     /* desktop: a linha cinza fica horizontal, ligando os cards */
     .paralisia ol::before{
         content: "";
         position: absolute;
-        left: 4%;
-        right: 4%;
+        left: 0;
+        right: 0;
         top: 50%;
         bottom: auto;
         width: auto;
@@ -523,19 +530,19 @@ footer p{
     .paralisia li{
         position: relative;
         flex: 1;
-        padding: 0.5rem 0.4rem 0.8rem 0.4rem;
+        padding: 0.8rem 0.8rem 1rem 0.8rem;
     }
 
     .paralisia h3{
-        font-size: 0.85rem;
-        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
     }
 
     .paralisia li p{
-        font-size: 0.5rem;
+        font-size: 0.65rem;
     }
 
-    /* === footer === */
+    /* === footer (igual ao da Home) === */
 
     footer{
         gap: 1rem;
