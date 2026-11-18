@@ -1,2 +1,292 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background-color: #e8f4f8;
+color: #183b61;
+}
+
+.container {
+width: 85%;
+max-width: 1200px;
+margin: auto;
+}
+
+/* MENU DE NAVEGAÇÃO */
+header {
+background-color: #e8f4f8;
+padding: 20px 0;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+width: 65px;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 15px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: white;
+background-color: #174d82;
+padding: 10px 22px;
+border-radius: 25px;
+font-size: 12px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+nav ul li a:hover {
+background-color: #d6ad45;
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+width: 100%;
+height: 400px;
+background-image: linear-gradient(
+rgba(0, 0, 0, 0.35),
+rgba(0, 0, 0, 0.35)
+), url("imagens/banner.jpg");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.banner h1 {
+color: #e6b92e;
+font-size: 42px;
+}
+
+.banner p {
+color: white;
+font-size: 20px;
+font-weight: bold;
+}
+
+/* APRESENTAÇÃO */
+.apresentacao {
+background-color: white;
+padding: 40px;
+margin-bottom: 40px;
+}
+
+.apresentacao p {
+font-size: 28px;
+line-height: 1.5;
+color: #24466f;
+}
+
+/* PROCESSO DE ATENDIMENTO */
+.processo {
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 40px 10px;
+gap: 20px;
+}
+
+.etapa {
+text-align: center;
+width: 23%;
+}
+
+.etapa img {
+width: 115px;
+height: 115px;
+object-fit: contain;
+border-radius: 50%;
+}
+
+.etapa p {
+font-size: 13px;
+font-weight: bold;
+color: #172f4b;
+margin-top: 12px;
+}
+
+/* PLANOS */
+.planos {
+background-color: #fffdf9;
+padding: 40px 25px;
+margin-top: 35px;
+}
+
+.planos h2 {
+color: #c4a044;
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.planos-container {
+display: flex;
+justify-content: center;
+gap: 25px;
+}
+
+.plano {
+width: 50%;
+border: 1px solid #b9c8d2;
+border-radius: 12px;
+padding: 25px;
+background-color: #fff;
+}
+
+.plano h3 {
+font-size: 21px;
+color: #172f4b;
+}
+
+.plano .preco {
+font-size: 16px;
+font-weight: bold;
+margin: 8px 0 20px;
+}
+
+.plano ul {
+list-style: none;
+}
+
+.plano ul li {
+font-size: 13px;
+margin-bottom: 12px;
+color: #233b50;
+}
+
+.plano ul li::before {
+content: "✔";
+color: #27899a;
+margin-right: 8px;
+}
+
+/* BOTÕES DOS PLANOS */
+.botao-plano {
+display: block;
+text-align: center;
+text-decoration: none;
+color: white;
+background-color: #398d9e;
+padding: 12px;
+border-radius: 25px;
+font-size: 12px;
+margin-top: 20px;
+}
+
+.premium .botao-plano {
+background-color: #d2ad45;
+}
+
+/* FEEDBACKS */
+.feedbacks {
+background-color: #fffdf9;
+border: 2px solid #4d91bd;
+margin: 35px auto;
+padding: 20px;
+width: 90%;
+}
+
+.feedbacks h2 {
+color: #c4a044;
+font-size: 25px;
+margin-bottom: 10px;
+}
+
+.feedbacks p {
+color: #333;
+font-size: 17px;
+}
+
+.feedback-area {
+background-color: white;
+border: 1px solid #b8cbd5;
+min-height: 400px;
+margin-top: 20px;
+}
+
+.feedback-footer {
+background-color: #a7d5e7;
+padding: 15px;
+display: flex;
+gap: 10px;
+}
+
+.feedback-footer input {
+flex: 1;
+padding: 12px;
+border: none;
+border-radius: 15px;
+}
+
+/* RODAPÉ */
+footer {
+background-color: #a7d5e7;
+padding: 20px;
+text-align: center;
+color: #31536c;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+.container {
+width: 95%;
+}
+
+nav {
+flex-direction: column;
+gap: 20px;
+}
+
+nav ul {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.banner {
+height: 280px;
+}
+
+.banner h1 {
+font-size: 30px;
+}
+
+.apresentacao p {
+font-size: 21px;
+}
+
+.processo {
+flex-wrap: wrap;
+}
+
+.etapa {
+width: 45%;
+}
+
+.planos-container {
+flex-direction: column;
+}
+
+.plano {
+width: 100%;
+}
+}
+
 
 
