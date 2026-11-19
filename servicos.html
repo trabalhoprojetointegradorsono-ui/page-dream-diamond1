@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/Servicos.css">
+<script src="servicos.js" defer></script>
 </head>
 
 <body>
@@ -207,31 +208,32 @@ sua vontade.
 <!-- ÍCONES DE AVALIAÇÃO -->
 <div class="icones-feedback">
 
-<button type="button">
-<img src="Imagens/Servicos/Positivo.svg"
-alt="Gostei">
+<button type="button" class="avaliacao" data-avaliacao="positivo" aria-label="Comentário positivo" aria-pressed="false">
+<img src="Imagens/Servicos/Positivo.svg" alt="">
 </button>
 
-<button type="button">
-<img src="Imagens/Servicos/Negativo.svg"
-alt="Não gostei">
+<button type="button" class="avaliacao" data-avaliacao="negativo" aria-label="Comentário negativo" aria-pressed="false">
+<img src="Imagens/Servicos/Negativo.svg" alt="">
 </button>
 
-<span>*Data*</span>
+<span id="data-feedback">--/--/----</span>
 
 </div>
 
-
 <!-- ÁREA DE COMENTÁRIOS -->
-<form>
+<div class="comentarios-lista" id="comentarios-lista" aria-live="polite"></div>
 
-<img src="Imagens/Servicos/perfil.png"
-alt="Foto do usuário">
+<form id="form-feedback">
+
+<img src="Imagens/Servicos/perfil.png" alt="Foto do usuário">
 
 <input
+id="comentario"
+name="comentario"
 type="text"
 placeholder="Escreva seu comentário..."
 aria-label="Escreva seu comentário"
+required
 >
 
 <button type="submit">
@@ -249,11 +251,11 @@ ENVIAR
 
 <!-- RODAPÉ -->
 
- <footer>
+  <footer>
       <div>
         <ul>
           <li>
-            <a href="#"><img src="Icones/Footer/twitter.svg" alt="twitter" /></a>
+            <a href="https://x.com/DreamDiamond_"><img src="Icones/Footer/twitter.svg" alt="twitter"></a>
           </li>
         </ul>
       </div>
@@ -261,7 +263,7 @@ ENVIAR
       <div>
         <ul>
           <li>
-            <a href="#"><img src="Icones/Footer/instagram.svg" alt="instagram" /></a>
+            <a href="https://www.instagram.com/dream.diamondifc/"><img src="Icones/Footer/instagram.svg" alt="instagram"></a>
           </li>
         </ul>
       </div>
