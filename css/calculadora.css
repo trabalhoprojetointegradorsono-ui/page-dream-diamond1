@@ -406,7 +406,7 @@ footer p {
 /* === media queries === */
 @media (min-width: 500px) {
     body {
-        font-size: 14px;
+        font-size: 2vw;
     }
 
 
@@ -432,6 +432,7 @@ footer p {
         max-width: 500px;
         margin: auto;
         padding: 0 30px;
+        text-align: center;
     }
 
     .calcu > div:first-child {
@@ -478,52 +479,3 @@ footer p {
         font-size: 7px;
     }
 
-
-
-}
-
-@media (min-width: 1028px){
-
-    html {
-    font-size: clamp(1rem, 0.55rem + 0.9vw, 1.5rem);
-  }
-
-  header {
-    padding: 1.1rem 2rem 1.5rem;
-  }
-
-  .nav-list {
-    flex-direction: row;
-    gap: 1.75rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header li a {
-    min-width: 138px;
-    padding: 0.85rem 1.3rem;
-    font-size: 0.78rem;
-  }
-
-  footer {
-    padding: 1.2rem 2.5rem;
-  }
-
-  footer ul {
-    gap: 1.5rem;
-  }
-
-  footer a {
-    width: 52px;
-    height: 52px;
-  }
-
-  footer img {
-    width: 52px;
-    min-width: 52px;
-  }
-
-  footer p {
-    font-size: 1rem;
-  }
-}
