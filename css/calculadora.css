@@ -408,6 +408,8 @@ footer p {
     body {
         font-size: 2vw;
     }
+  header {
+      display: flex;
 
 
 
