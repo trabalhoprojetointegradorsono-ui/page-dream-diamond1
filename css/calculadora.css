@@ -1,15 +1,15 @@
-/* === variáveis === */
 :root {
-  --cor-azul-principal: #094fa4;
-  --cor-hover-menu: #0a6bff;
-  --cor-titulo-banner: #ffae00;
-  --cor-texto-banner: #0094ff;
-  --cor-texto-principal: #3b4350;
-  --cor-fundo-pagina: #f4f9ff;
+  --blue: #094fa4;
+  --blue-strong: #0a6bff;
+  --yellow: #ffae00;
+  --sky: #0094ff;
+  --text: #3b4350;
+  --bg: #f4f9ff;
 }
 
-/* === estilos globais === */
-
+/* ================================
+   RESET / CONFIGURAÇÕES GERAIS
+================================ */
 * {
     box-sizing: border-box;
 }
@@ -22,8 +22,8 @@ html {
 }
 
 body {
-  background: var(--cor-fundo-pagina);
-  color: var(--cor-texto-principal);
+  background: var(--bg);
+  color: var(--text);
   font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
@@ -33,7 +33,6 @@ img {
   max-width: 100%;
 }
 
-/* === header === */
 header {
   background: linear-gradient(180deg, #f3f9ff 0%, #eaf4ff 100%);
   border-bottom: 3px solid rgba(9, 79, 164, 0.12);
@@ -64,7 +63,7 @@ header {
   padding: 0.45rem 0.75rem;
   border-radius: 1rem;
   background: #ffffff;
-  border: 1px solid var(--cor-azul-principal);
+  border: 1px solid var(--blue);
   box-shadow: 0 6px 16px rgba(10, 107, 255, 0.12);
 }
 
@@ -93,51 +92,48 @@ header li a {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
-header li a:hover , header a.ativo{
+header li a:hover {
   background: #ffffff;
-  color: var(--cor-hover-menu);
-  border-color: var(--cor-azul-principal);
+  color: var(--blue-strong);
+  border-color: var(--blue);
   box-shadow: 0 6px 16px rgba(10, 107, 255, 0.12);
   transform: translateY(-1px);
 }
 
 
-/* === banner === */
 .banner {
     width: 100%;
     text-align: center;
-    padding: 19px 20px 3px;
+    padding: 24px 20px 10px;
 }
 
 .banner h1 {
-    margin: 0 auto 5px;
-    max-width: 185px;
+    margin: 0 auto 12px;
+    max-width: 320px;
     color: #f2b900;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 1.25;
     font-weight: 600;
 }
 
 .banner h2 {
     margin: 0 auto;
-    width: 92px;
-    height: 105px;
+    width: 120px;
+    height: 135px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .banner h2 img {
-    width: 92px;
-    height: 105px;
+    width: 120px;
+    height: 135px;
     object-fit: contain;
 }
 
-
-/* === calculadora === */
 .calcu {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 20px;
 }
 
 .calcu > div {
@@ -146,61 +142,61 @@ header li a:hover , header a.ativo{
 
 .calcu > div:first-child {
     border: 1px solid #cfcfcf;
-    border-radius: 6px;
-    padding: 8px 8px 10px;
-    margin: 0 auto 8px;
+    border-radius: 8px;
+    padding: 16px 16px 18px;
+    margin: 0 auto 16px;
     background: #fff;
 }
 
 .calcu > div:first-child > div {
-    margin: -1px auto 8px;
-    width: 102px;
+    margin: 0 auto 16px;
+    width: 180px;
 }
 
 #calcular {
     display: flex;
-    width: 102px;
-    height: 18px;
+    width: 180px;
+    height: 42px;
     align-items: center;
     justify-content: center;
     background: #f5cc32;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #222;
-    font-size: 7px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 .calcu h1 {
-    margin: 0 0 7px;
+    margin: 0 0 12px;
     text-align: center;
-    font-size: 6.5px;
+    font-size: 20px;
     font-weight: 600;
     color: #333;
 }
 
 .calcu > div:first-child h1 {
-    font-size: 6.5px;
-    margin-bottom: 6px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .calcu h2 {
-    margin: 5px 0 3px;
-    font-size: 5.3px;
-    line-height: 1.2;
+    margin: 12px 0 6px;
+    font-size: 16px;
+    line-height: 1.3;
     font-weight: 600;
     color: #333;
 }
 
 .calcu input {
     width: 100%;
-    height: 14px;
+    height: 42px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
     background: #ededed;
-    padding: 0 7px;
+    padding: 0 12px;
     outline: none;
     font-family: inherit;
-    font-size: 5.5px;
+    font-size: 16px;
     color: #333;
 }
 
@@ -214,65 +210,63 @@ header li a:hover , header a.ativo{
 
 .calcu > div:nth-child(2) {
     border: 1px solid #cfcfcf;
-    border-radius: 6px;
-    padding: 7px 8px 8px;
+    border-radius: 8px;
+    padding: 16px;
     background: #fff;
 }
 
 .calcu > div:nth-child(2) h1 {
-    margin-bottom: 5px;
-    font-size: 6.5px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .calcu > div:nth-child(2) h2 {
-    margin: 0 0 4px;
-    font-size: 4.5px;
-    line-height: 1.35;
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 #resultadoSono {
     display: block;
     width: 100%;
-    height: 91px;
+    height: 300px;
     resize: none;
-    overflow: hidden;
+    overflow: auto;
     border: 0;
     outline: none;
     background: #fff;
-    padding: 1px 2px;
+    padding: 4px;
     font-family: Arial, sans-serif;
-    font-size: 4.3px;
-    line-height: 1.35;
+    font-size: 15px;
+    line-height: 1.4;
     color: #222;
 }
 
 
-/* === tempo === */
 .tempo {
     display: none;
 }
 
-/* === como devemos dormir === */
 .devemos {
     width: calc(100% - 30px);
-    margin: 22px auto 0;
-    padding: 17px 12px 10px;
+    margin: 28px auto 0;
+    padding: 22px 12px 10px;
     border-top: 1px solid #d8d8d8;
 }
 
 .devemos h1 {
-    margin: 0 0 13px;
+    margin: 0 0 16px;
     text-align: center;
     color: #f2b900;
-    font-size: 8.5px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 600;
 }
 
 .devemos p {
-    margin: 0 0 9px;
-    font-size: 5px;
-    line-height: 1.45;
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.5;
     text-align: left;
     color: #333;
 }
@@ -283,38 +277,34 @@ header li a:hover , header a.ativo{
 
 .devemos ul {
     list-style: none;
-    margin: 10px 0 0;
+    margin: 14px 0 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 6px;
-    row-gap: 7px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 12px;
 }
 
 .devemos li {
     position: relative;
     margin: 0;
     padding: 0 2px;
-    font-size: 4.3px;
-    line-height: 1.25;
-    color: #333;
+    font-size: 15px;
+    line-height: 1.3;
+    color: #f0b800;
     text-align: center;
 }
 
-.devemos li::first-line {
+.devemos li span {
+    display: block;
     color: #333;
-}
-
-
-.devemos li {
-    color: #f0b800;
+    font-weight: 600;
 }
 
 .devemos > h2 {
     display: none;
 }
 
-/* === fonte === */
 .fonte {
     width: calc(100% - 40px);
     margin: 7px auto 0;
@@ -339,145 +329,179 @@ header li a:hover , header a.ativo{
 }
 
 
-/* === footer === */
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  padding: 0.9rem 1.1rem;
-  background: linear-gradient(90deg, #eaf5ff 0%, #dfeeff 100%);
-  border-top: 4px solid var(--cor-azul-principal);
-  margin: 2rem 0rem 0rem 0rem;
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    margin-top: 2rem;
+    background: linear-gradient(90deg, #eaf5ff 0%, #dfeeff 100%);
+    border-top: 4px solid var(--blue);
 }
 
-footer > div {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    list-style: none;
 }
 
-footer ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  list-style: none;
-  width: 100%;
+footer li{
+    display: flex;
+    align-items: center;
 }
 
-footer li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
+footer img{
+    width: 38%;
+    min-width: 38px;
+    height: auto;
+    display: block;
 }
 
-footer a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-}
-
-footer a:hover {
-  transform: translateY(-1px);
-}
-
-footer img {
-  width: 32px;
-  min-width: 32px;
-  height: auto;
-  display: block;
-}
-
-footer p {
-  flex: 1;
-  margin: 0;
-  font-weight: 700;
-  text-transform: lowercase;
-  color: var(--cor-azul-principal);
-  letter-spacing: 0.08em;
+footer p{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--blue);
+    letter-spacing: 0.08em;
 }
 
 
-
-/* === media queries === */
+/* ================================
+   TELA MAIOR
+================================ */
 @media (min-width: 500px) {
     body {
-        font-size: 2vw;
+        font-size: 18px;
     }
-  header {
-      display: flex;
-
-
-
-
 
     .banner {
-        padding-top: 35px;
+        padding-top: 40px;
     }
 
     .banner h1 {
-        font-size: 23px;
-        max-width: 330px;
+        font-size: 34px;
+        max-width: 520px;
     }
 
     .banner h2,
     .banner h2 img {
-        width: 145px;
-        height: 165px;
+        width: 170px;
+        height: 190px;
     }
 
     .calcu {
-        max-width: 500px;
+        max-width: 720px;
         margin: auto;
         padding: 0 30px;
-        text-align: center;
     }
 
     .calcu > div:first-child {
-        padding: 14px;
+        padding: 24px;
     }
 
     #calcular {
-        width: 170px;
-        height: 30px;
-        font-size: 11px;
+        width: 220px;
+        height: 48px;
+        font-size: 18px;
     }
 
-    .calcu h1 {
-        font-size: 11px;
+    .calcu > div:first-child > div {
+        width: 220px;
     }
 
-    .calcu h2 {
-        font-size: 9px;
+    .calcu h1,
+    .calcu > div:first-child h1,
+    .calcu > div:nth-child(2) h1 {
+        font-size: 26px;
+    }
+
+    .calcu h2,
+    .calcu > div:nth-child(2) h2 {
+        font-size: 19px;
     }
 
     .calcu input {
-        height: 25px;
-        font-size: 9px;
+        height: 48px;
+        font-size: 19px;
     }
 
     #resultadoSono {
-        height: 150px;
-        font-size: 8px;
+        height: 340px;
+        font-size: 18px;
     }
 
     .devemos {
-        max-width: 500px;
+        max-width: 720px;
     }
 
     .devemos h1 {
-        font-size: 14px;
+        font-size: 30px;
     }
 
     .devemos p {
-        font-size: 8px;
+        font-size: 19px;
+    }
+
+    .devemos ul {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .devemos li {
-        font-size: 7px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px){
+
+    html{
+        font-size: 3.81vw;
     }
 
+    header{
+        display: block;
+        padding: 0.5vw 0;
+    }
+
+    .nav-list{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8vw;
+    }
+
+    .logo-item{
+        width: auto;
+        margin: 0 0vw 0 0;
+    }
+
+    header img{
+        width: 7vw;
+        margin: 0;
+    }
+
+    header li{
+        width: auto;
+    }
+
+    header li a{
+        width: auto;
+        padding: 0.7vw 1.4vw;
+        border-radius: 1vw;
+        font-size: clamp(10px, 1.2vw, 20px);
+        letter-spacing: 0.04em;
+    }
+
+    footer{
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+    footer ul{
+        gap: 1rem;
+    }
+}
